@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: 'albuns', loadChildren: './albuns/albuns.module#AlbunsPageModule' },
   { path: 'artista', loadChildren: './letra/artista/artista.module#ArtistaPageModule' },
   { path: 'album', loadChildren: './letra/album/album.module#AlbumPageModule' },
-  { path: 'musica', loadChildren: './letra/musica/musica.module#MusicaPageModule' }
+  { path: 'musica', loadChildren: './letra/musica/musica.module#MusicaPageModule' },
+  { path: 'editar', loadChildren: './editar/editar.module#EditarPageModule' }
 ];
 
 @NgModule({

@@ -1,24 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Cadastro</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>Editar</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  
   <form #fc="ngForm" (ngSubmit)="onSubmit()">
 
     <div class="form-group">
       <label>Artista</label>
       <input type="text" class="form-control" [(ngModel)]="letra.artista" name="artista" required />
     </div>
-      
+
     <button type="submit" [disabled]="fc.invalid" class="btn btn-primary">Salvar</button>
     <button type="reset" class="btn btn-primary" (click)="cancel()">Cancelar</button>
   </form>
-  
-  
 </ion-content>

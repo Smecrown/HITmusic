@@ -11,11 +11,11 @@ import { LetraDadosService } from '../letra/letra-dados.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.page.html',
-  styleUrls: ['./cadastro.page.scss'],
+  selector: 'app-editar',
+  templateUrl: './editar.page.html',
+  styleUrls: ['./editar.page.scss'],
 })
-export class CadastroPage implements OnInit {
+export class EditarPage implements OnInit {
   letra: Letra;
   key: string = '';
 
@@ -27,10 +27,17 @@ export class CadastroPage implements OnInit {
 
   ngOnInit() {
     this.letra = new Letra();
+    this.letraDataService.currentLetra.subscribe(data => {
+      if (data.letra && data.key) {
+        this.letra = new Letra();
+        this.letra.artista = data.letra.artista;
+        this.key = data.key;
+      }
+    })
   }
 
   onSubmit() {
-    this.letraService.insert(this.letra);
+    this.letraService.update(this.letra, this.key);
     this.router.navigate(['/home']);
     this.letra = new Letra();
   }
