@@ -1,12 +1,12 @@
 # HITmusic
 
-	ABAS :
+ABAS :
     - Home;
     - Cadastro;
     - Artistas;
     - Álbuns;
     - Ocultas(Não aparecem na sidemenu):
-	      . Editar;
+    	. Editar;
         . Artista;
         . Álbum;
         . Letra e Tradução da Música.
@@ -97,12 +97,9 @@ Editar:
 /=/=/=/=/=/=/=/=/= Ocultos =/=/=/=/=/=/=/=/=/=/
 
 
+Idéias:
 
-
-
-
-
-sistema de aprovação de novas músicas (talvez por email)
-sistema de categoria e listagem de categorias similares
-nome de quem enviou a contribuição
-Criação de Favoritos
+	sistema de aprovação de novas músicas (talvez por email)
+	sistema de categoria e listagem de categorias similares
+	nome de quem enviou a contribuição
+	Criação de Favoritos
