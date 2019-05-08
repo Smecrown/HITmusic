@@ -1,15 +1,16 @@
 # HITmusic
 
-ABAS :
-    - Home;
-    - Cadastro;
-    - Artistas;
-    - Álbuns;
-    - Ocultas(Não aparecem na sidemenu):
-    	. Editar;
-        . Artista;
-        . Álbum;
-        . Letra e Tradução da Música.
+ABAS:
+
+	- Home;
+	- Cadastro;
+	- Artistas;
+	- Álbuns;
+	- Ocultas(Não aparecem na sidemenu):
+		. Editar;
+		. Artista;
+		. Álbum;
+		. Letra e Tradução da Música.
 
 
 Home: 
