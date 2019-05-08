@@ -15,6 +15,14 @@
       <label>Artista</label>
       <input type="text" class="form-control" [(ngModel)]="letra.artista" name="artista" required />
     </div>
+    <div class="form-group">
+      <label>Álbum</label>
+      <input type="text" class="form-control" [(ngModel)]="letra.album" name="album" required />
+    </div>
+    <div class="form-group">
+      <label>Música</label>
+      <input type="text" class="form-control" [(ngModel)]="letra.musica" name="musica" required />
+    </div>
       
     <button type="submit" [disabled]="fc.invalid" class="btn btn-primary">Salvar</button>
     <button type="reset" class="btn btn-primary" (click)="cancel()">Cancelar</button>

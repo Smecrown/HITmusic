@@ -44,14 +44,18 @@
 
 
 
+    
 
-
-    <table class="table table-hover">
+    <table class="table table-hover" >
       <tr class="bg-dark text-light">
         <th>Artista</th>
+        <th>Álbum</th>
+        <th>Música</th>
       </tr>
-      <tr *ngFor="let letra of letras | async">
-        <td>{{letra.artista}}</td>
+      <tr *ngFor="let letra of letras | async" >
+        <td [routerLink]="[ '/artista',letra.key]">{{letra.artista}}</td>
+        <td [routerLink]="[ '/album',letra.key]">{{letra.album}}</td>
+        <td [routerLink]="[ '/musica',letra.key]">{{letra.musica}}</td>
         <td><button type="button" class="btn btn-warning" (click)="edit(letra, letra.key)">Editar</button></td>
         <td><button type="button" class="btn btn-danger ml-2" (click)="delete(letra.key)">Excluir</button></td>
       </tr>

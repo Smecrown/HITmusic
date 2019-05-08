@@ -1,9 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>album</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Álbum
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <table *ngIf="letra$ | async as letra">
+    <tr class="bg-dark text-light">
+      <th>Artista</th>
+      <th>Álbum</th>
+      <th>Música</th>
+    </tr>
+    <tr>
+      <td [routerLink]="[ '/artista',key]">{{letra.artista}}</td>
+      <td>{{letra.album}}</td>
+      <td [routerLink]="[ '/musica',key]">{{letra.musica}}</td>
+    </tr>
+  </table>
 </ion-content>

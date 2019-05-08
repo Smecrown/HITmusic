@@ -8,5 +8,12 @@
 </ion-header>
 
 <ion-content>
-
+  <table>
+    <tr>
+      <th>Álbuns</th>
+    </tr>
+    <tr *ngFor="let letra of letras | async">
+      <td [routerLink]="[ '/album',letra.key]">{{letra.album}}</td>
+    </tr>
+  </table>
 </ion-content>

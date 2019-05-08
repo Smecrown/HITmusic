@@ -7,9 +7,9 @@ const routes: Routes = [
   { path: 'cadastro', loadChildren: './cadastro/cadastro.module#CadastroPageModule' },
   { path: 'artistas', loadChildren: './artistas/artistas.module#ArtistasPageModule' },
   { path: 'albuns', loadChildren: './albuns/albuns.module#AlbunsPageModule' },
-  { path: 'artista', loadChildren: './letra/artista/artista.module#ArtistaPageModule' },
-  { path: 'album', loadChildren: './letra/album/album.module#AlbumPageModule' },
-  { path: 'musica', loadChildren: './letra/musica/musica.module#MusicaPageModule' },
+  { path: 'artista/:key', loadChildren: './letra/artista/artista.module#ArtistaPageModule' },
+  { path: 'album/:key', loadChildren: './letra/album/album.module#AlbumPageModule' },
+  { path: 'musica/:key', loadChildren: './letra/musica/musica.module#MusicaPageModule' },
   { path: 'editar', loadChildren: './editar/editar.module#EditarPageModule' }
 ];
 

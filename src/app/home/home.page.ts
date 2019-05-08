@@ -32,6 +32,7 @@ export class HomePage {
     this.router.navigate(['/editar'])
     this.letraDataService.changeLetra(letra, key);
   }
+  
 
 
 

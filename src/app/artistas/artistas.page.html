@@ -9,4 +9,13 @@
 
 <ion-content>
 
+  <table class="table table-hover">
+    <tr class="bg-dark text-light">
+      <th>Artista</th>
+    </tr>
+    <tr *ngFor="let letra of letras | async">
+      <td [routerLink]="[ '/artista',letra.key]">{{letra.artista}}</td>
+    </tr>
+  </table>
+
 </ion-content>

@@ -33,6 +33,10 @@ export class LetraService {
       )
   }
 
+  get(key: string) {
+    return this.db.object('/letra/' + key).valueChanges();
+  }
+
   delete(key: string) {
     this.db.object(`letra/${key}`).remove();
   }
