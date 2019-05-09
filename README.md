@@ -99,8 +99,11 @@ Editar:
 
 
 Idéias:
-
+	
+	Ordenar Páginas
 	sistema de aprovação de novas músicas (talvez por email)
 	sistema de categoria e listagem de categorias similares
 	nome de quem enviou a contribuição
 	Criação de Favoritos
+	inserção de fotos através do Angular Firestorage ( https://github.com/fmoreirati/angular-upload2019)
+	
