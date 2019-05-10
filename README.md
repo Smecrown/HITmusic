@@ -106,4 +106,6 @@ Idéias:
 	nome de quem enviou a contribuição
 	Criação de Favoritos
 	inserção de fotos através do Angular Firestorage ( https://github.com/fmoreirati/angular-upload2019)
+	Criação de Arrays para artista e album, para quando inserir uma nova música complementar o artista + album.
+	Ordenação para orderBy, query list.
 	
