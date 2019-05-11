@@ -56,6 +56,9 @@
         <td [routerLink]="[ '/artista',letra.key]">{{letra.artista}}</td>
         <td [routerLink]="[ '/album',letra.key]">{{letra.album}}</td>
         <td [routerLink]="[ '/musica',letra.key]">{{letra.musica}}</td>
+        <td>
+        <img [src]="fotos" alt="">
+      </td>
         <td><button type="button" class="btn btn-warning" (click)="edit(letra, letra.key)">Editar</button></td>
         <td><button type="button" class="btn btn-danger ml-2" (click)="delete(letra.key)">Excluir</button></td>
       </tr>

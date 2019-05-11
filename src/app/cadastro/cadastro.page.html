@@ -9,7 +9,7 @@
 
 <ion-content>
   
-  <form #fc="ngForm" (ngSubmit)="onSubmit()">
+  <form #fc="ngForm" (ngSubmit)="onSubmit(fc)"> 
 
     <div class="form-group">
       <label>Artista</label>
@@ -24,9 +24,16 @@
       <input type="text" class="form-control" [(ngModel)]="letra.musica" name="musica" required />
     </div>
       
-    <button type="submit" [disabled]="fc.invalid" class="btn btn-primary">Salvar</button>
-    <button type="reset" class="btn btn-primary" (click)="cancel()">Cancelar</button>
-  </form>
+
+
   
+  <div class="form-group">
+    <label for="foto"></label>
+    <input type="file" (change)="onFileSelected($event)">
+    <!-- <button type="button" (click)="onUpload()">Enviar</button> -->
+  </div>
   
+  <button type="submit" [disabled]="fc.invalid" class="btn btn-primary" (click)="onUpload()">Salvar</button>
+  <button type="reset" class="btn btn-primary" (click)="cancel()">Cancelar</button>
+</form>
 </ion-content>

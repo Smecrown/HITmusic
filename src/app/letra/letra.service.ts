@@ -22,7 +22,7 @@ export class LetraService {
   }
 
   getAll() {
-    return this.db.list('letra')
+    return this.db.list<Letra>('letra')
       .snapshotChanges()
       .pipe(
         map(changes => {
@@ -34,7 +34,7 @@ export class LetraService {
   }
 
   get(key: string) {
-    return this.db.object('/letra/' + key).valueChanges();
+    return this.db.object<Letra>('/letra/' + key).valueChanges();
   }
 
   delete(key: string) {
