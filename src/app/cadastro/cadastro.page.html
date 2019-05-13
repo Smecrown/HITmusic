@@ -12,7 +12,41 @@
   <form #fc="ngForm" (ngSubmit)="onSubmit()">
 
     <div class="form-group">
-      <label>Artista</label>
+      <ion-item>
+        <ion-label position="floating">Artista</ion-label>
+        <ion-input color="dark" type="text" 
+        class="form-control" [(ngModel)]="letra.artista" name="artista" required></ion-input>
+      </ion-item>
+    </div>
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="floating">Álbum</ion-label>
+        <ion-input color="dark" type="text" 
+        class="form-control" [(ngModel)]="letra.album" name="album" required></ion-input>
+      </ion-item>
+    </div>
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="floating">Música</ion-label>
+        <ion-input color="dark" type="text" 
+        class="form-control" [(ngModel)]="letra.musica" name="musica" required></ion-input>
+      </ion-item>
+    </div>
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="floating">Gênero</ion-label>
+        <ion-input color="dark" type="text" 
+        class="form-control" [(ngModel)]="letra.genero" name="genero" required></ion-input>
+      </ion-item>
+    </div>
+  
+
+    <ion-button type="submit" [disabled]="fc.invalid" color="tertiary">Salvar</ion-button>
+    <ion-button type="reset" (click)="cancel()" color="danger">Cancelar</ion-button>
+  </form> 
+</ion-content>
+<!--
+  <label>Artista</label>
       <input type="text" class="form-control" [(ngModel)]="letra.artista" name="artista" required />
     </div>
     <div class="form-group">
@@ -25,8 +59,4 @@
     </div>
       
     <button type="submit" [disabled]="fc.invalid" class="btn btn-primary">Salvar</button>
-    <button type="reset" class="btn btn-primary" (click)="cancel()">Cancelar</button>
-  </form>
-  
-  
-</ion-content>
+    <button type="reset" class="btn btn-primary" (click)="cancel()">Cancelar</button> -->

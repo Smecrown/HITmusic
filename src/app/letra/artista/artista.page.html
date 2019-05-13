@@ -10,7 +10,26 @@
 </ion-header>
 
 <ion-content>
-  <table *ngIf="letra$ | async as letra">
+
+    <ion-item *ngIf="letra$ | async as letra">
+        <ion-avatar slot="start" >
+            <img src="https://4.bp.blogspot.com/-Sc1X8aVn7Xc/UyoSN0gmWuI/AAAAAAAAJlQ/UXNYVrsTL9s/s1600/PNG+-+Disco+2.png">
+          </ion-avatar>
+        <ion-label>
+          {{letra.artista}}
+        </ion-label> 
+      </ion-item>
+    <ion-item *ngIf="letra$ | async as letra" color="tertiary">
+        <h4 [routerLink]="[ '/musica',key]">
+          {{letra.musica}}
+        </h4>
+    </ion-item>
+    <ion-item *ngIf="letra$ | async as letra" color="medium">
+        <p [routerLink]="[ '/album',key]">
+          {{letra.album}}
+        </p>
+    </ion-item>
+  <!-- <table *ngIf="letra$ | async as letra">
     <tr class="bg-dark text-light">
       <th>Artista</th>
       <th>Álbum</th>
@@ -21,5 +40,5 @@
       <td [routerLink]="[ '/album',key]">{{letra.album}}</td>
       <td [routerLink]="[ '/musica',key]">{{letra.musica}}</td>
     </tr>
-  </table>
+  </table> -->
 </ion-content>
