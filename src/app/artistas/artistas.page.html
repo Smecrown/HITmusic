@@ -8,14 +8,12 @@
 </ion-header>
 
 <ion-content>
-
-  <table class="table table-hover">
-    <tr class="bg-dark text-light">
-      <th>Artista</th>
-    </tr>
-    <tr *ngFor="let letra of letras | async">
-      <td [routerLink]="[ '/artista',letra.key]">{{letra.artista}}</td>
-    </tr>
-  </table>
-
+  <ion-item *ngFor="let letra of letras | async">
+      <ion-avatar slot="start" >
+          <img src="https://4.bp.blogspot.com/-Sc1X8aVn7Xc/UyoSN0gmWuI/AAAAAAAAJlQ/UXNYVrsTL9s/s1600/PNG+-+Disco+2.png">
+        </ion-avatar>
+      <ion-label [routerLink]="[ '/artista',letra.key]">
+        {{letra.artista}}
+      </ion-label>
+    </ion-item>
 </ion-content>
